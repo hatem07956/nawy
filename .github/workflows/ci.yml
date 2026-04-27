@@ -30,7 +30,7 @@
 #     needs: lint
 #     runs-on: ubuntu-latest
 #     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    
+
 #     steps:
 #       - name: Checkout code
 #         uses: actions/checkout@v4
@@ -49,5 +49,6 @@
 #         with:
 #           context: ./node-hello-master
 #           push: true
-#           tags: ${{ secrets.DOCKER_USERNAME }}/node-hello:latest
-#           labels: version=latest
+#           tags: |
+#             ${{ secrets.DOCKER_USERNAME }}/node-hello:latest
+#             ${{ secrets.DOCKER_USERNAME }}/node-hello:${{ github.sha }}
