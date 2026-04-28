@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "eslint index.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
   },
   "repository": {
     "type": "git",

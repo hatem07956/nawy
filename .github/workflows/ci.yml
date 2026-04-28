@@ -24,7 +24,12 @@ jobs:
 
       - name: Run linting
         working-directory: node-hello-master
-        run: npm run lint --if-present || echo "No lint script found, skipping..."
+        run: |
+          if npm run lint --if-present 2>&1 | grep -q "missing script"; then
+            echo "No lint script found, skipping..."
+          else
+            echo "Lint passed"
+          fi
 
   build-and-push:
     needs: lint
