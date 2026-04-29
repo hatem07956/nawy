@@ -21,9 +21,3 @@ variable "host_port" {
   type        = number
   default     = 3000
 }
-
-variable "newrelic_license_key" {
-  description = "New Relic license key for log and infra monitoring"
-  type        = string
-  sensitive   = true
-}
