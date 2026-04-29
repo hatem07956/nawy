@@ -6,4 +6,5 @@ module "node_app" {
   container_name = "node-hello-app"
   container_port = 3000
   host_port      = 3000   # ← change host port here without touching the module
+  newrelic_license_key = var.newrelic_license_key
 }
