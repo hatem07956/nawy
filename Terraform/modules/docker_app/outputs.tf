@@ -1,11 +1,11 @@
 output "container_id" {
   description = "ID of the running Docker container"
-  value       = docker_container.node_hello.id
+  value       = docker_container.node_app.id
 }
 
 output "container_name" {
   description = "Name of the running Docker container"
-  value       = docker_container.node_hello.name
+  value       = docker_container.node_app.name
 }
 
 output "app_url" {
@@ -15,5 +15,5 @@ output "app_url" {
 
 output "image_id" {
   description = "ID of the pulled Docker image"
-  value       = docker_image.node_hello.image_id
+  value       = docker_image.node_app.image_id
 }
