@@ -1,4 +1,4 @@
-module "node_hello" {
+module "node_app" {
   source = "./modules/docker_app"
 
   # Override defaults or omit to use the defaults in the module

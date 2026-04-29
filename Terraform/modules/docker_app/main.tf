@@ -1,13 +1,13 @@
 # Pull the image from Docker Hub
-resource "docker_image" "node_hello" {
+resource "docker_image" "node_app" {
   name         = var.image_name
   keep_locally = false
 }
 
 # Run the container
-resource "docker_container" "node_hello" {
+resource "docker_container" "node_app" {
   name  = var.container_name
-  image = docker_image.node_hello.image_id
+  image = docker_image.node_app.image_id
 
   restart = "unless-stopped"
 
