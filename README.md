@@ -86,7 +86,7 @@ npx eslint .
 
 ## Assumptions
 
-- No cloud deployment — deploying to ECS would require VPC, subnets, IAM roles, task
+- No cloud deployment — deploying to ECS would require VPC, subnets, IAM roles
 
 ## Delivery
 
